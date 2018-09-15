@@ -1,0 +1,539 @@
+@font-face {
+    font-family: Roboto;
+    src: url(../font/Roboto-Regular.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+html, body {
+  -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+  -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+  -webkit-user-select: none;
+  font-size: 16px;
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.preloader-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
+  background: white;
+}
+
+.preloader {
+  width: 200px;
+  height: auto;
+}
+
+.bg-img {
+  background-image: url("/img/inntouch-logo.png");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center 10%;
+  background-attachment: fixed;
+}
+
+a {
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.main-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container-outer {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.main-container-inner {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.main-container-inner.fixed {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  min-height: auto;
+}
+
+.logo-img {
+  width: 100%;
+  height: auto;
+}
+
+#login-form,
+#signup-form,
+#uploadPhoto-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#signup-form,
+#login-form,
+#uploadPhoto-form {
+  width: 95vw;
+  padding: 40px;
+  /*box-shadow: 5px 0 25px -15px black;*/
+  border: 2px solid #7DD2F7;
+}
+
+#signup-form input[type=submit],
+#login-form input[type=submit],
+#uploadPhoto-form input[type=submit] {
+  margin-top: 20px;
+}
+
+#signin-btn,
+#signup-btn,
+.post-submit-btn {
+  background-color: #7DD2F7;
+  border: 0;
+  padding: 0 !important;
+}
+
+
+#signup-form a,
+#uploadPhoto-form a {
+  margin-top: 10px;
+}
+
+#login-form input,
+#signup-form input,
+#uploadPhoto-form input {
+  width: 100%;
+  height: 7vh;
+}
+
+#login-form input,
+#signup-form input {
+  height: 60px;
+  padding-left: 20px;
+}
+
+#login-form span {
+  margin-top: 10px;
+}
+
+.profile-info,
+.profile-data,
+.follow-btn-wrapper {
+  //margin-top: 25px;
+  //padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  //box-shadow: 10px 0 25px -15px black;
+}
+
+.follow-btn-wrapper {
+  margin-top: 25px;
+}
+
+.profile-name,
+.profile-browse-name,
+.search-profile-name,
+.friends-list-name {
+  width: 100%;
+  height: 20vh;
+  padding: 25px;
+  margin-bottom: 0;
+  margin-top: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #7DD2F7;
+}
+
+.friends-list-name {
+  height: 100%;
+  flex: 3;
+  font-size: 1.3em;
+}
+
+.profile-browse-name,
+.search-profile-name,
+.friends-list-name {
+  justify-content: center;
+  color: white;
+}
+
+.search-profile-name {
+  margin-bottom: 5px;
+}
+
+.profile-followings {
+  margin-top: 25px;
+}
+
+.profile-followers {
+  margin-bottom: 25px;
+}
+
+/*.profile-data h2 {
+  text-align: center;
+}*/
+
+.profile-photo-wrapper,
+.search-profile-photo,
+.friends-list-photo {
+  height: 80vh;
+  /*background-color: red;*/
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.friends-list-photo {
+  width: 100%;
+  height: 100%;
+  /*min-width: 50vw;*/
+}
+
+.form-profile-search {
+  margin-top: 25px;
+  width: 90%;
+}
+
+.form-profile-search.shadow-box {
+  box-shadow: 5px 0 25px -15px black;
+}
+
+.form-profile-search.shadow-box input[type=search] {
+  /*background-color: white;*/
+}
+
+.form-profile-search input {
+  height: 60px;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.search-message {
+  text-align: center;
+}
+
+.profile-posts {
+  //flex: 2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.posts-wrapper {
+  width: 95%;
+  //padding: 0 15%;
+  margin-top: 25px;
+}
+
+.post {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  /*border: 1px solid blue;*/
+  /*border-radius: 0 0 0 50px;*/
+  /*box-shadow: 5px 0 25px -15px black;*/
+  border: 2px solid #7DD2F7;
+}
+
+/*.post:hover,*/
+.form-wrapper.post {
+  background-color: #7DD2F7;
+}
+
+.form-wrapper {
+  /*position: fixed;
+  top: 0;
+  right: calc(0px + 10vw);
+  z-index: 9999;
+  width: 10vw;*/
+  width: 100%;
+}
+
+.form-wrapper.post {
+  margin-top: 25px;
+}
+
+.form-buttons-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;;
+  align-items: center;
+  width: 100%;
+}
+
+.form-buttons-wrapper input[type=submit] {
+  /*background-color: #9AFF04;*/
+  font-weight: bold;
+}
+/*
+.form-buttons-wrapper input[type=reset]:hover {
+  background-color: #FD6732;
+}
+*/
+#post-form .form-buttons-wrapper input {
+  padding: 0px;
+}
+
+.hide {
+  display: none;
+}
+
+.post .delete-post-button {
+  display: flex;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 10px;
+  //background-color: #FE016E;
+  border-radius: 0 0 0 5px;
+}
+
+.delete-post-btn-img {
+  width: 27px;
+  height: 27px;
+}
+
+.show {
+  display: flex;
+}
+
+#post-form {
+  flex-direction: column;
+  width: 100%;
+}
+
+#post-form input,
+#post-form textarea {
+  width: 100%;
+  resize: none;
+}
+
+#post-form input {
+  height: 60px;
+  padding-left: 20px;
+}
+
+#post-form textarea {
+  padding: 20px;
+}
+
+.profilePicture {
+  height: 80vh;
+  width: auto;
+}
+
+.form-profile-search {
+/*  padding: 20px 40px 0 40px;*/
+}
+
+.fixed {
+  position: fixed;
+  z-index: 999;
+  top: 0px;
+  margin: auto;
+}
+
+.search-profile-main-container,
+.friendships-main-container {
+  width: 100%;
+  /*margin-top: 125px;*/
+  display: flex;
+  flex-direction: column;
+  //flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.search-profile-wrapper,
+.friendships-profile-wrapper {
+  width: 100%;
+  padding: 0;
+}
+
+.friendships-profile-wrapper {
+  margin-bottom: 5px;
+}
+
+/*.search-profile-wrapper:first-child,
+.friendships-profile-wrapper:first-child {
+  margin-top: 50px;
+}*/
+
+.search-profile-wrapper a,
+.friendships-profile-wrapper a {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.friendships-profile-wrapper a {
+  flex-direction: row;
+  height: 33vh;
+}
+
+.search-profile-wrapper h2,
+.friendships-profile-wrapper h2 {
+}
+
+.search-profile-wrapper:hover,
+.friendships-profile-wrapper:hover {
+  /*background-color: #dee;*/
+}
+
+.search-profile-picture-wrapper,
+.friendships-profile-picture-wrapper {
+  width: 100vw;
+  height: 100%;
+}
+
+.friendships-profile-picture-wrapper {
+  /*width: 50vw;*/
+  flex: 2;
+}
+
+.search-profile-img,
+.friendships-profile-img {
+  width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-size: 22px;
+}
+
+i {
+  font-size: 12px;
+  color: blue;
+}
+
+.add-friend-btn,
+.remove-friend-btn,
+.profile-search-btn,
+.profile-settings-btn,
+.logout-btn,
+.my-profile-btn,
+.signup-btn,
+#open-camera-btn,
+#open-gallery-btn,
+.post-submit-btn {
+  width: 90%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.post-submit-btn {
+  border: 2px solid white;
+  width: 100%;
+  margin-top: 25px;
+}
+
+.post-submit-btn h2 {
+  color: white;
+}
+
+.signup-btn {
+  width: 100%;
+  margin-top: 25px;
+}
+
+.add-friend-btn {
+  background-color: #7DD2F7;
+  color: white;
+}
+
+.add-friend-btn:hover {
+  border: 1px solid black;
+  transition: all ease-in 0.2s;
+}
+
+.remove-friend-btn {
+  transition: all ease-in 0.2s;
+  background-color: #FE016E;
+  color: white;
+}
+
+.profile-settings-btn,
+.profile-search-btn,
+.logout-btn,
+.my-profile-btn,
+.signup-btn,
+#open-camera-btn,
+#open-gallery-btn {
+  border: 1px solid #7DD2F7;
+}
+
+#open-gallery-btn {
+  margin-top: 50px;
+}
+
+//.profile-settings-btn,
+.profile-search-btn,
+.my-profile-btn {
+  margin-top: 20px;
+}
+
+.profile-settings-btn:hover,
+.profile-search-btn:hover,
+.my-profile-btn:hover {
+  background-color: #7DD2F7;
+}
+
+.logout-btn:hover {
+  background-color: #FE016E;
+}
+
+.number {
+  background-color: #7DD2F7;
+  min-width: 50px;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center
+}
+
+#myImage {
+  width: 100%;
+}

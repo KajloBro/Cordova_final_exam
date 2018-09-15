@@ -1,0 +1,369 @@
+* {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.bg-img {
+  background-image: url("/img/inntouch-logo.png");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center 10%;
+  background-attachment: fixed;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container-outer {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.main-container-inner {
+  width: 80vw;
+  min-height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.main-container-inner.fixed {
+  min-height: auto;
+}
+
+.logo-img {
+  width: 100%;
+  height: auto;
+}
+
+#login-form,
+#signup-form,
+#uploadPhoto-form {
+  width: 27vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#signup-form,
+#login-form,
+#uploadPhoto-form {
+  padding: 40px;
+  box-shadow: 5px 0 25px -15px black;
+}
+
+#signup-form input[type=submit],
+#login-form input[type=submit],
+#uploadPhoto-form input[type=submit] {
+  margin-top: 20px;
+}
+
+#signup-form a,
+#uploadPhoto-form a {
+  margin-top: 10px;
+}
+
+#login-form input,
+#signup-form input,
+#uploadPhoto-form input {
+  width: 100%;
+  height: 7vh;
+}
+
+#login-form input,
+#signup-form input {
+  padding-left: 20px;
+}
+
+#login-form span {
+  margin-top: 10px;
+}
+
+.profile-info {
+  margin-top: 25px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-shadow: 10px 0 25px -15px black;
+}
+
+.form-profile-search {
+  margin-top: 25px;
+  width: 100%;
+}
+
+.form-profile-search.shadow-box {
+  box-shadow: 5px 0 25px -15px black;
+}
+
+.form-profile-search.shadow-box input[type=search] {
+  /*background-color: white;*/
+}
+
+.form-profile-search input {
+  height: 60px;
+  width: 100%;
+  padding-left: 20px;
+}
+
+.profile-posts {
+  flex: 2;
+}
+
+.posts-wrapper {
+  width: 100%;
+  padding: 0 15%;
+  margin-top: 25px;
+}
+
+.post {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  /*border: 1px solid blue;*/
+  /*border-radius: 0 0 0 50px;*/
+  box-shadow: 5px 0 25px -15px black;
+
+}
+
+.post:hover {
+  background-color: #7DD2F7;
+}
+
+.form-wrapper {
+  /*position: fixed;
+  top: 0;
+  right: calc(0px + 10vw);
+  z-index: 9999;
+  width: 10vw;*/
+  width: 100%;
+}
+
+.form-buttons-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;;
+  align-items: center;
+  width: 100%;
+}
+
+.form-buttons-wrapper input[type=submit] {
+  /*background-color: #9AFF04;*/
+  font-weight: bold;
+}
+/*
+.form-buttons-wrapper input[type=reset]:hover {
+  background-color: #FD6732;
+}
+*/
+#post-form .form-buttons-wrapper input {
+  padding: 0px;
+}
+
+.hide {
+  display: none;
+}
+
+.post:hover .delete-post-button {
+  display: flex;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 10px;
+  background-color: #FE016E;
+  border-radius: 0 0 0 5px;
+}
+
+.delete-post-btn-img {
+  width: 27px;
+  height: 27px;
+}
+
+.show {
+  display: flex;
+}
+
+#post-form {
+  flex-direction: column;
+  width: 100%;
+}
+
+#post-form input,
+#post-form textarea {
+  width: 100%;
+  resize: none;
+}
+
+#post-form input {
+  height: 60px;
+  padding-left: 20px;
+}
+
+#post-form textarea {
+  padding: 20px;
+}
+
+.profilePicture {
+  width: 300px;
+  height: auto;
+}
+
+.form-profile-search {
+/*  padding: 20px 40px 0 40px;*/
+}
+
+.fixed {
+  position: fixed;
+  z-index: 999;
+  top: 0px;
+  margin: auto;
+}
+
+.search-profile-main-container,
+.friendships-main-container {
+  width: 80vw;
+  margin-top: 125px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.search-profile-wrapper,
+.friendships-profile-wrapper {
+  width: 25%;
+  padding: 10px;
+}
+
+.search-profile-wrapper a,
+.friendships-profile-wrapper a {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-profile-wrapper h2,
+.friendships-profile-wrapper h2 {
+  width: 100%;
+  text-align: center;
+  background-color: #7DD2F7;
+  padding: 10px;
+  margin: 0;
+}
+
+.search-profile-wrapper:hover,
+.friendships-profile-wrapper:hover {
+  background-color: #dee;
+}
+
+.search-profile-picture-wrapper,
+.friendships-profile-picture-wrapper {
+  width: 100%;
+  height: auto;
+}
+
+.search-profile-img,
+.friendships-profile-img {
+  width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-size: 22px;
+}
+
+i {
+  font-size: 12px;
+  color: blue;
+}
+
+.add-friend-btn,
+.remove-friend-btn,
+.profile-settings-btn,
+.logout-btn,
+.my-profile-btn {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-friend-btn {
+  background-color: #7DD2F7;
+  color: white;
+}
+
+.add-friend-btn:hover {
+  border: 1px solid black;
+  transition: all ease-in 0.2s;
+}
+
+.remove-friend-btn {
+  border: 2px solid #FE016E;
+}
+
+.remove-friend-btn:hover {
+  background-color: #FE016E;
+  color: white;
+  transition: all ease-in 0.2s;
+}
+
+.profile-settings-btn,
+.logout-btn,
+.my-profile-btn {
+  border: 1px solid #7DD2F7;
+}
+
+.profile-settings-btn,
+.my-profile-btn {
+  margin-top: 20px;
+}
+
+.profile-settings-btn:hover,
+.my-profile-btn {
+  background-color: #7DD2F7;
+}
+
+.logout-btn:hover {
+  background-color: #FE016E;
+}
+
+.number {
+  background-color: #7DD2F7;
+  min-width: 50px;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center
+}
